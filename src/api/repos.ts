@@ -4,7 +4,7 @@ import { axios } from '@/http/axios'
  */
 export const getUserRepo = (data: any) => {
   return axios({
-    url: `/users/${data.user}/repos?per_page=${data.pageSize}`,
+    url: `/users/${data.user}/repos?per_page=${data.pageNumber}`,
     method: 'get'
   })
 }

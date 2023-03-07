@@ -1,59 +1,80 @@
 <template>
   <a-config-provider>
-    <div>123123</div>
+    <div class="p-4 space-y-4">
+      <div class="font-bold text-2xl">
+        Kuro Hsu Repo list:
+      </div>
+      <div
+        v-for="item in repoList"
+        :key="item.id"
+        class="shadow-lg rounded-lg space-y-2 p-4"
+      >
+        <div class="font-bold text-lg">
+          {{ item.name }}
+        </div>
+        <div v-show="item.description">
+          {{ item.description }}
+        </div>
+        <a
+          class="font-semibold inline-block"
+          :href="item.html_url"
+          target="_blank"
+        >
+          {{ item.html_url }}
+        </a>
+      </div>
+      <infinite-loading
+        :distance="1"
+        @infinite="infiniteHandler"
+      />
+    </div>
   </a-config-provider>
 </template>
 
 <script lang="ts">
 // import _ from 'lodash'
-import { defineComponent, onBeforeMount } from 'vue'
+import InfiniteLoading from 'infinite-loading-vue3-ts'
+import { defineComponent, ref } from 'vue'
 
-// import { getUserRepo } from '@/api/repos'
+import { getUserRepo } from '@/api/repos'
 
 // const { MODE } = import.meta.env
 
 export default defineComponent({
   name: 'App',
+  components: {
+    InfiniteLoading
+  },
   setup: () => {
     /**
      * data
      */
-    // const component = ref<string>('DefaultPage')
+    const repoList = ref<any>([])
+    const pageNumber = ref<number>(6)
     /**
      * mehtods
      */
-    // const toGetUserInfo = () => {
-    //   if (_.isEmpty(auth.currentUser)) {
-    //     toGetCurrentUser()
-    //   }
-    //   if (_.isEmpty(auth.profileInfo)) {
-    //     toGetProfileInfo()
-    //   }
-    //   if (_.isEmpty(network.companyInfo)) {
-    //     toGetCompanyInfo()
-    //   }
-    // }
-    // const toGetCurrentUser = async (): Promise<void> => {
-    //   const res = await getUserInfo()
-    //   if (res?.success) {
-    //     auth.setCurrentUser(res.data)
-    //   }
-    // }
-    // const toGetProfileInfo = async (): Promise<void> => {
-    //   const res = await getProfileInfo()
-    //   if (res?.success) {
-    //     auth.setProfileInfo(res.data)
-    //   }
-    // }
-    // const toGetCompanyInfo = async (): Promise<void> => {
-    //   const res = await getCompanyInfo()
-    //   if (res?.success) {
-    //     network.setCompanyInfo(res.data)
-    //   }
-    // }
-    onBeforeMount(() => {
-      //
-    })
+    const infiniteHandler = async ($state: any): Promise<void> => {
+      const params = {
+        user: 'kurotanshi',
+        pageNumber: pageNumber.value
+      }
+      const res = await getUserRepo(params)
+
+      if (res.length) {
+        pageNumber.value += 6
+        repoList.value.push(...res)
+        setTimeout(() => {
+          $state.loaded()
+        }, 500)
+      } else {
+        $state.complete()
+      }
+    }
+    return {
+      infiniteHandler,
+      repoList
+    }
   }
 })
 </script>
