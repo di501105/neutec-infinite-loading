@@ -1,0 +1,55 @@
+{
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "emmet.includeLanguages": {
+    "vue": "html"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.options": {
+    "extensions": [
+      "html",
+      "js",
+      "vue",
+      "ts"
+    ]
+  },
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "typescript",
+    "vue"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": [
+    "css",
+    "scss",
+    "less",
+    "vue",
+    "html"
+  ],
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css",
+    "vue": "html",
+    "vue-html": "html",
+},
+"editor.quickSuggestions": {
+    "strings": true
+},
+"cSpell.words": [
+  "antd",
+  "fontawesome",
+  "fortawesome",
+  "Mgmt",
+  "pinia",
+  "stylelint",
+  "unlocode",
+  "VITE",
+  "vnodes"
+]
+}

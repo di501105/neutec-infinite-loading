@@ -1,0 +1,499 @@
+@use '../utils/variables' as *;
+
+@each $name, $color in $bluePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $darkBluePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $lightBluePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $purplePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $yellowPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $redPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $greenPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $deepOrangePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $lightGreenPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $deepRedPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $orangePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $infoBluePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $greyPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $lightPalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $whitePalettes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $primaryColors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $secondaryColors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $uilityColors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .icon-#{$name} i, i.icon-#{$name} {
+    color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+@each $name, $color in $greyColors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .text-#{$name}-hover:hover {
+    color: $color !important;
+  }
+  .text-#{$name}-active:active {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .bd-#{$name} {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-hover:hover {
+    border-color: $color !important;
+  }
+  .bd-#{$name}-active:active {
+    border-color: $color !important;
+  }
+}
+
+// Text
+@each $name, $color in $textColors {
+  .#{$name} {
+    color: $color !important;
+  }
+}
+
+// Border
+@each $name, $color in $borderColors {
+  .#{$name} {
+    border-color: $color !important;
+
+    &.q-separator {
+      background-color: $color !important;
+    }
+  }
+}
+
+// Background
+@each $name, $color in $backgroundColors {
+  .#{$name} {
+    background-color: $color !important;
+  }
+}
+
+// Overlay
+@each $name, $color in $overlayColors {
+  .#{$name} {
+    background-color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+// Root Color
+@each $name, $color in $mainColors {
+  .bg-#{$name} {
+    background: var(--q-color-$name) !important;
+  }
+}
