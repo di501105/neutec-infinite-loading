@@ -1,18 +1,18 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
 
-import { setupPinia } from '@/plugins/pinia'
-import { setupRouter } from '@/plugins/router'
+import { setupPinia } from '@/plugins/pinia';
+import { setupRouter } from '@/plugins/router';
 
-import App from './App.vue'
+import App from './App.vue';
 
-import '@/assets/scss/tailwind-base.scss'
-import 'ant-design-vue/dist/antd.less'
-import '@/assets/scss/tailwind.scss'
-import '@/assets/scss/all.scss'
+import '@/assets/scss/tailwind-base.scss';
+import 'ant-design-vue/dist/antd.less';
+import '@/assets/scss/tailwind.scss';
+import '@/assets/scss/all.scss';
 
-const app = createApp(App)
+const app = createApp(App);
 
-setupPinia(app)
-setupRouter(app)
+setupPinia(app);
+setupRouter(app);
 
-app.mount('#app')
+app.mount('#app');

@@ -1,6 +1,6 @@
-import type { App } from 'vue'
-import Router from '@/router'
+import type { App } from 'vue';
+import Router from '@/router';
 
-export function setupRouter (app: App<Element>): void {
-  app.use(Router)
+export function setupRouter(app: App<Element>): void {
+  app.use(Router);
 }

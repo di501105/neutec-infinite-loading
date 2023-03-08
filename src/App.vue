@@ -1,9 +1,7 @@
 <template>
   <a-config-provider>
     <div class="p-4 space-y-4">
-      <div class="font-bold text-3xl">
-        Kuro Hsu Repo list:
-      </div>
+      <div class="font-bold text-3xl">Kuro Hsu Repo list:</div>
       <div
         v-for="item in repoList"
         :key="item.id"
@@ -23,59 +21,56 @@
           {{ item.html_url }}
         </a>
       </div>
-      <infinite-loading
-        :distance="1"
-        @infinite="infiniteHandler"
-      />
+      <infinite-loading :distance="1" @infinite="infiniteHandler" />
     </div>
   </a-config-provider>
 </template>
 
 <script lang="ts">
-import debounce from 'lodash/debounce'
-import InfiniteLoading from 'infinite-loading-vue3-ts'
-import { defineComponent, ref } from 'vue'
+import debounce from 'lodash/debounce';
+import InfiniteLoading from 'infinite-loading-vue3-ts';
+import { defineComponent, ref } from 'vue';
 
-import { getUserRepo } from '@/api/repos'
+import { getUserRepo } from '@/api/repos';
 
 export default defineComponent({
   name: 'App',
   components: {
-    InfiniteLoading
+    InfiniteLoading,
   },
   setup: () => {
     /**
      * data
      */
-    const repoList = ref<any>([])
-    const pageNumber = ref<number>(6)
+    const repoList = ref<any>([]);
+    const pageNumber = ref<number>(6);
     /**
      * mehtods
      */
     const infiniteHandler = debounce(async ($state: any): Promise<void> => {
       const params = {
         user: 'kurotanshi',
-        pageNumber: pageNumber.value
-      }
-      const res = await getUserRepo(params)
+        pageNumber: pageNumber.value,
+      };
+      const res = await getUserRepo(params);
 
       if (res.length) {
-        repoList.value = []
-        pageNumber.value += 6
-        repoList.value.push(...res)
+        repoList.value = [];
+        pageNumber.value += 6;
+        repoList.value.push(...res);
         setTimeout(() => {
-          $state.loaded()
-        }, 1000)
+          $state.loaded();
+        }, 1000);
       } else {
-        $state.complete()
+        $state.complete();
       }
-    }, 500)
+    }, 500);
     return {
       infiniteHandler,
-      repoList
-    }
-  }
-})
+      repoList,
+    };
+  },
+});
 </script>
 
 <style lang="scss">
@@ -83,6 +78,6 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @apply bg-stone-100 min-h-full;
+  @apply bg-white min-h-full;
 }
 </style>

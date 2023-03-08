@@ -1,9 +1,6 @@
 module.exports = {
   important: true,
-  content: [
-    './public/**/*.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}'
-  ],
+  content: ['./public/**/*.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     screens: {
       xs: { max: '575px' },
@@ -11,9 +8,9 @@ module.exports = {
       md: '768px',
       lg: '992px',
       xl: '1200px',
-      xxl: '1600px'
+      xxl: '1600px',
     },
-    extend: {}
+    extend: {},
   },
-  plugins: []
-}
+  plugins: [],
+};

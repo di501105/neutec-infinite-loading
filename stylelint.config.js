@@ -2,18 +2,13 @@ module.exports = {
   extends: [
     'stylelint-config-standard',
     'stylelint-config-sass-guidelines',
-    'stylelint-config-recommended-vue'
+    'stylelint-config-recommended-vue',
   ],
-  ignoreFiles: [
-    'src/assets/scss/**/*.scss'
-  ],
+  ignoreFiles: ['src/assets/scss/**/*.scss'],
   defaultSeverity: 'warning',
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
-  plugins: [
-    'stylelint-scss',
-    'stylelint-order'
-  ],
+  plugins: ['stylelint-scss', 'stylelint-order'],
   rules: {
     'max-nesting-depth': null,
     'no-empty-source': null,
@@ -90,7 +85,7 @@ module.exports = {
       'box-shadow',
       'text-shadow',
       'resize',
-      'transition'
+      'transition',
     ],
     'property-no-vendor-prefix': null,
     'selector-max-compound-selectors': null,
@@ -100,14 +95,17 @@ module.exports = {
     'selector-class-pattern': null,
     'selector-no-qualifying-type': null,
     'selector-max-id': null,
-    'selector-pseudo-element-no-unknown': [true, { ignorePseudoElements: ['v-deep'] }],
+    'selector-pseudo-element-no-unknown': [
+      true,
+      { ignorePseudoElements: ['v-deep'] },
+    ],
     'scss/dollar-variable-pattern': [/^foo-/, { ignore: 'global' }],
     'scss/at-import-no-partial-leading-underscore': null,
     'at-rule-no-unknown': null,
     'scss/at-rule-no-unknown': null,
     'scss/at-mixin-pattern': null,
     'max-empty-lines': null,
-    'custom-property-empty-line-before': null
+    'custom-property-empty-line-before': null,
     // 'font-family-no-missing-generic-family-keyword': null
-  }
-}
+  },
+};

@@ -1,4 +1,4 @@
-import instance from './index'
+import instance from './index';
 /**
  * @param {String} method  請求的方法：get、post、delete、put
  * @param {String} url     請求的url:
@@ -7,24 +7,25 @@ import instance from './index'
  * @returns {Promise}     返回一個promise對象，其實就相當於axios請求數據的返回值
  */
 const axios = async ({ method, url, data, config }: any): Promise<any> => {
-  method = method.toLowerCase()
-  if (method === 'post') {
-    return instance.post(url, data, { ...config })
-  } else if (method === 'get') {
+  const methodLowCase = method.toLowerCase();
+  if (methodLowCase === 'post') {
+    return instance.post(url, data, { ...config });
+  }
+  if (methodLowCase === 'get') {
     return instance.get(url, {
       params: data,
-      ...config
-    })
-  } else if (method === 'delete') {
+      ...config,
+    });
+  }
+  if (methodLowCase === 'delete') {
     return instance.delete(url, {
       params: data,
-      ...config
-    })
-  } else if (method === 'put') {
-    return instance.put(url, data, { ...config })
-  } else {
-    console.error('未知的method' + method)
-    return false
+      ...config,
+    });
   }
-}
-export { axios }
+  if (methodLowCase === 'put') {
+    return instance.put(url, data, { ...config });
+  }
+  return false;
+};
+export { axios };
