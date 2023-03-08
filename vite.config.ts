@@ -9,7 +9,7 @@ import { resolve } from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   envDir: './viteEnv',
-  base: '/',
+  base: './neutec-infinite-loading/',
   server: { port: 8081 },
   plugins: [
     vue(),
